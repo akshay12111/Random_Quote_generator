@@ -1,7 +1,7 @@
 let quoteContainer = document.getElementById("quote-container");
 let quoteText = document.getElementById("quote");
 let quoteAuthor = document.getElementById("author");
-let twitterButton = document.getElementById("twitter");
+let twitterBtn = document.getElementById("twit");
 let newQuotebtn = document.getElementById("new-quote");
 let loder = document.getElementById("loader")
 
@@ -25,7 +25,7 @@ function newQuote(){
         quoteAuthor.textContent = "Unknown";
     }
     else{
-    quoteAuthor.textContent = quote.author;
+    quoteAuthor.textContent = `"${quote.author}"`;
     }
     if(quote.text.length > 100){
         quoteText.classList.add('long-quote')
@@ -52,13 +52,13 @@ try {
 
 function tweetQuote(){
     const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
-    window.open(twitterUrl, "_blank");
+    window.open(twitterUrl, '_blank');
 }
 
 
 // Event listeners
 
 newQuotebtn.addEventListener("click", newQuote);
-twitterButton.addEventListener("click", tweetQuote);
+twitterBtn.addEventListener("click", tweetQuote);
 
 getQuote();
