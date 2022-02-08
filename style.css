@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(rgb(79, 245, 245), rgb(21, 116, 116));
+  color: rgba(255, 255, 255, 0.966);
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-container {
+  width: auto;
+  max-width: 900px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgb(29, 26, 26);
+  box-shadow: 0 10px 10px 10px rgba(black);
+}
+
+.loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid black; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.quote-text {
+  font-size: 2.75rem;
+}
+
+.long-quote {
+  font-size: 2rem;
+}
+
+.fa-quote-left {
+  font-size: 4rem;
+}
+
+.quote-author {
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none;
+  height: 2.5rem;
+  border-radius: 5px;
+  color: black;
+  background-color: rgb(179, 172, 172);
+  outline: none;
+  padding: 0.rem 1.8rem;
+  box-shadow: 0 0.3 rgba(34, 13, 13, 0.3);
+}
+
+button:hover {
+  filter: brightness(120%);
+}
+
+button:active {
+  background-color: #424242;
+}
+
+@media screen and (max-width: 1000px){
+  .quote-container{
+    margin: auto 10px;
+    font-size: 1.75rem;
+  }
+}
